@@ -6,7 +6,7 @@ from file_manager_api import Client
 
 To create a client:
 
-Client = Client(<url for the service>, <your user name>, <your password>)
+Client = Client(*url for the service, *your user name, *your password)
 
 To create a file:
 
