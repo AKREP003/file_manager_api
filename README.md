@@ -10,7 +10,7 @@ Client = Client(*url for the service, *your user name, *your password)
 
 To create a file:
 
-Client.write_file(<new file name>,  <content>) #content is optional when creating a new file
+Client.write_file(*new file name, *content) #content is optional when creating a new file
 
 To list the existing files:
 
@@ -18,8 +18,8 @@ Client.list_files
 
 To read a file:
 
-Client.read_file(<file name>)
+Client.read_file(*file name)
 
 To write into a file:
 
-Client.read_file(<file name>, <content>) #content is optional when you want to empty the file
+Client.read_file(*file name, *content) #content is optional in case you want to empty the file
