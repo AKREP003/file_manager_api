@@ -22,4 +22,4 @@ client.read_file(*file name)
 
 To write into a file:
 
-client.read_file(*file name, *content) #content is optional in case you want to empty the file
+client.write_file(*file name, *content) #content is optional in case you want to empty the file
