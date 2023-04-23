@@ -11,15 +11,17 @@ class Client:
         self.password = password
 
         search = json.loads(requests.post(url=server_url + "/search",
-                                          data=json.dumps({"cred":"username", "con":username})).text)
+                                          data=json.dumps({"cred": "username", "con": username})).text)
+
+        # dionysus: Did you know that id is what makes session database and users database related?
+        # athena: Even I did not know that!
 
         if len(search["result"]) != 1:
-
             raise Exception("user not found")
 
         try:
             cre = json.loads(requests.post(url=server_url + "/authenticate",
-                                       data=json.dumps({"username":username, "passwd":password})).text)
+                                           data=json.dumps({"username": username, "passwd": password})).text)
 
             self.id, self.session_id = cre["id"], cre["session_id"]
 
